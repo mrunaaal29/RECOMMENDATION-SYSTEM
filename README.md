@@ -57,18 +57,25 @@ Python 3
 Libraries
 
 pandas → Data loading and preprocessing
+
 scipy.sparse → Building sparse interaction matrices
+
 implicit → ALS model for implicit feedback
+
 numpy → Numerical operations
+
 tqdm → Progress bars
+
 matplotlib (optional) → Visualization
+
 Editor / Platform
+
 Jupyter Notebook
-VS Code / PyCharm (optional)
+
 Anaconda environment
 
 
-5. Methodology
+4. Methodology
    
 Step 1: Data Preprocessing
 Load ratings and movies
@@ -147,13 +154,13 @@ Generate recommendations or compute evaluation metrics
 8. OUTPUT
 
 1)Top 10 movies recommendation for User id - 1
-<img width="772" height="720" alt="Image" src="https://github.com/user-attachments/assets/1096a02c-91ab-49f0-a49c-53839b4ea798" />
+<img width="400" height="400" alt="Image" src="https://github.com/user-attachments/assets/1096a02c-91ab-49f0-a49c-53839b4ea798" />
 
 2)Top 10 movies recommendation for User id - 80
-<img width="1164" height="720" alt="Image" src="https://github.com/user-attachments/assets/655f0376-220d-44f8-9a93-b20ed727ea44" />
+<img width="600" height="350" alt="Image" src="https://github.com/user-attachments/assets/655f0376-220d-44f8-9a93-b20ed727ea44" />
 
 3)Evaluation metrics
-<img width="700" height="272" alt="Image" src="https://github.com/user-attachments/assets/0490303c-40d5-47cc-8901-a97af3749ec8" />
+<img width="500" height="150" alt="Image" src="https://github.com/user-attachments/assets/0490303c-40d5-47cc-8901-a97af3749ec8" />
 
 The screenshot shows the model’s performance using Leave-One-Out evaluation on the MovieLens 1M dataset. The results are:
 
