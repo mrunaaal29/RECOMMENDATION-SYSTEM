@@ -148,12 +148,15 @@ The pipeline can be extended to larger datasets, multiple signals (views, clicks
 7. How to Run the Project
    
 Download the dataset
+
 Place ratings.dat and movies.dat inside a folder like ml-1m/
 
 Install dependencies:
 
 pip install implicit scipy pandas tqdm
+
 Run the notebook or script to train the model
+
 Generate recommendations or compute evaluation metrics
 
 8. OUTPUT
