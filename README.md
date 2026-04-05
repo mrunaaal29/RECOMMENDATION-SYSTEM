@@ -176,7 +176,9 @@ Generate recommendations or compute evaluation metrics
 The screenshot shows the model’s performance using Leave-One-Out evaluation on the MovieLens 1M dataset. The results are:
 
 Precision@10: 0.0016
+
 Recall@10: 0.0016
+
 MAP@10: 0.00025
 
 These values are expected for an implicit ALS model on a large, sparse dataset. Because the task requires predicting one hidden movie out of thousands, the metrics naturally remain low. The model is functioning correctly, and the results match typical research benchmarks for ALS-based recommenders.
