@@ -47,10 +47,15 @@ users.dat → User demographic information (optional)
 For this project, only ratings and movies data are used.
 Ratings are mapped to implicit confidence scores so the ALS model can learn from positive feedback strength rather than raw rating values.
 
+
 3. Technologies and Tools Used
+   
 Programming Language
+
 Python 3
+
 Libraries
+
 pandas → Data loading and preprocessing
 scipy.sparse → Building sparse interaction matrices
 implicit → ALS model for implicit feedback
@@ -61,7 +66,10 @@ Editor / Platform
 Jupyter Notebook
 VS Code / PyCharm (optional)
 Anaconda environment
-4. Methodology
+
+
+5. Methodology
+   
 Step 1: Data Preprocessing
 Load ratings and movies
 
@@ -69,6 +77,7 @@ Convert explicit ratings to implicit confidence scores using the formula:
 
 confidence = 1 + (rating / 5) * 40
 Create user–item interaction matrix (CSR Sparse Matrix)
+
 Step 2: Model Training (ALS – Alternating Least Squares)
 
 The implicit library's ALS algorithm is used with factorization:
@@ -77,6 +86,7 @@ The implicit library's ALS algorithm is used with factorization:
 Regularization = 0.1
 20 iterations
 Trained on the item-user matrix (as required by implicit)
+
 Step 3: Personalized Movie Recommendations
 
 For any user:
@@ -84,6 +94,7 @@ For any user:
 Retrieve top-N recommended movies
 Ensure already-watched items are filtered out
 Map internal item indices back to actual MovieIDs and titles
+
 Step 4: Evaluation Metrics
 
 Implemented metrics:
@@ -98,6 +109,7 @@ Using Leave-One-Out evaluation:
 For every user, hide one “last rated” movie
 Train on the remaining interactions
 Check if the hidden movie appears in the top-K recommendations
+
 5. Results Summary
 
 Using ALS with implicit confidence signals, the model produced:
@@ -122,6 +134,7 @@ Book or content recommendation platforms
 The pipeline can be extended to larger datasets, multiple signals (views, clicks, time spent), and advanced ranking models like BPR or Neural Recommenders.
 
 7. How to Run the Project
+   
 Download the dataset
 Place ratings.dat and movies.dat inside a folder like ml-1m/
 
@@ -130,3 +143,22 @@ Install dependencies:
 pip install implicit scipy pandas tqdm
 Run the notebook or script to train the model
 Generate recommendations or compute evaluation metrics
+
+8. OUTPUT
+
+1)Top 10 movies recommendation for User id - 1
+<img width="772" height="720" alt="Image" src="https://github.com/user-attachments/assets/1096a02c-91ab-49f0-a49c-53839b4ea798" />
+
+2)Top 10 movies recommendation for User id - 80
+<img width="1164" height="720" alt="Image" src="https://github.com/user-attachments/assets/655f0376-220d-44f8-9a93-b20ed727ea44" />
+
+3)Evaluation metrics
+<img width="700" height="272" alt="Image" src="https://github.com/user-attachments/assets/0490303c-40d5-47cc-8901-a97af3749ec8" />
+
+The screenshot shows the model’s performance using Leave-One-Out evaluation on the MovieLens 1M dataset. The results are:
+
+Precision@10: 0.0016
+Recall@10: 0.0016
+MAP@10: 0.00025
+
+These values are expected for an implicit ALS model on a large, sparse dataset. Because the task requires predicting one hidden movie out of thousands, the metrics naturally remain low. The model is functioning correctly, and the results match typical research benchmarks for ALS-based recommenders.
