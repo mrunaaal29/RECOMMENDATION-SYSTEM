@@ -132,10 +132,15 @@ These values are typical for implicit matrix factorization models on large spars
 This project demonstrates concepts applicable to:
 
 OTT platforms (Netflix, Amazon Prime, Hotstar)
+
 E-commerce product recommendations
+
 Music streaming services (Spotify, Gaana)
+
 News feed personalization
+
 Online advertising ranking
+
 Book or content recommendation platforms
 
 The pipeline can be extended to larger datasets, multiple signals (views, clicks, time spent), and advanced ranking models like BPR or Neural Recommenders.
@@ -154,13 +159,16 @@ Generate recommendations or compute evaluation metrics
 8. OUTPUT
 
 1)Top 10 movies recommendation for User id - 1
+
 <img width="400" height="400" alt="Image" src="https://github.com/user-attachments/assets/1096a02c-91ab-49f0-a49c-53839b4ea798" />
 
 2)Top 10 movies recommendation for User id - 80
+
 <img width="600" height="350" alt="Image" src="https://github.com/user-attachments/assets/655f0376-220d-44f8-9a93-b20ed727ea44" />
 
 3)Evaluation metrics
-<img width="500" height="150" alt="Image" src="https://github.com/user-attachments/assets/0490303c-40d5-47cc-8901-a97af3749ec8" />
+
+<img width="420" height="150" alt="Image" src="https://github.com/user-attachments/assets/0490303c-40d5-47cc-8901-a97af3749ec8" />
 
 The screenshot shows the model’s performance using Leave-One-Out evaluation on the MovieLens 1M dataset. The results are:
 
